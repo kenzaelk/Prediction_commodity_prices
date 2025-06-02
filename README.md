@@ -11,7 +11,7 @@ The goal of this project is to develop predictive models that can forecast commo
 - **Daily prediction:** Forecast daily commodity prices.
 - **Sentiment Analysis:** Incorporate market sentiment data to refine price predictions.
 - **Multiple Machine Learning Models:** Includes Linear Regression, Random Forest, and more.
-- **Model Evaluation:** Compare models using metrics like RMSE and R-squared.
+- **Model Evaluation:** Compare models using metrics like MSE, MAPE and R-squared.
 - **Calculate the Hurst Exponent (HE) and Local Lyapunov Exponent (LLE)**: Provide insight into the predictability and chaotic nature of the time series data.
 
 ## Repository Structure
@@ -63,16 +63,13 @@ The goal of this project is to develop predictive models that can forecast commo
 ### Model Selection
 A variety of machine learning models were employed in this project to capture the diverse patterns in commodity price data. The following models were used:
 - **Random Forest (RF):** An ensemble learning method that builds multiple decision trees and merges them to obtain a more accurate and stable prediction.
-- **Decision Trees (DT):** A non-parametric supervised learning method used for classification and regression. It breaks down the data into smaller and smaller subsets while simultaneously developing an associated decision tree.
 - **Long Short-Term Memory (LSTM):** A type of recurrent neural network (RNN) that is well-suited for sequential data, such as time series. It can learn long-term dependencies, making it ideal for capturing patterns in historical price data.
-- **Gated Recurrent Unit (GRU):** A variant of LSTM that simplifies the architecture and speeds up training while retaining the ability to model temporal dependencies.
 - **Deep Neural Network (DNN):** A multi-layered neural network that can model complex relationships in the data. The depth of the network allows it to capture a wide range of features.
 - **Gradient Boosting Regressor (GBR):** An ensemble learning technique that builds models sequentially, each correcting the errors of its predecessor. It is particularly effective for tabular data with a mix of categorical and continuous features.
-- **k-Nearest Neighbors (kNN):** A simple, instance-based learning method where the output is determined by the closest data points in the feature space. It’s useful for capturing local patterns in the data.
 - **Linear Regression (LR):** A basic linear approach to modeling the relationship between a dependent variable and one or more independent variables. It serves as a benchmark model in this project.
 
 ### Model Evaluation
-- **Metrics:** The models are evaluated using RMSE (Root Mean Squared Error) and R-squared to determine their accuracy and goodness of fit.
+- **Metrics:** The models are evaluated using MSE (Mean Squared Error) and R-squared to determine their accuracy and goodness of fit.
 - **Cross-validation:** Employed to ensure models generalize well on unseen data.
 
 ## Prediction Sentiment Price
@@ -83,7 +80,7 @@ In addition to traditional machine learning models, this project also integrates
 ### Methodology
 - **Sentiment Data Collection:** Gathered from APIs, google news, and social media platform (Reddit).
 - **Sentiment Analysis Techniques:** Natural Language Processing (NLP) techniques like RoBERTa, VADER or TextBlob are used to quantify sentiment.
-- **Integration with Models:** Sentiment scores are included as features in the models, particularly in RF, LSTM and GRU models, to capture the influence of market sentiment on price movements.
+- **Integration with Models:** Sentiment scores are included as features in the models, to capture the influence of market sentiment on price movements.
 
 ## Hurst Exponent (HE) and Local Lyapunov Exponent (LLE) Analysis
 
