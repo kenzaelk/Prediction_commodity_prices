@@ -1,4 +1,4 @@
-# Prediction_commodity_prices
+## Prediction_commodity_prices
 
 This repository contains a machine learning project aimed at predicting commodity prices, including high-frequency (5-minute interval), mid-frequency (30-minute interval), and daily data. The project leverages various machine learning models to forecast commodity prices based on historical data, and also incorporates sentiment analysis to enhance predictive accuracy.
 
@@ -79,7 +79,7 @@ In addition to traditional machine learning models, this project also integrates
 
 ### Methodology
 - **Sentiment Data Collection:** Gathered from APIs, google news, and social media platform (Reddit).
-- **Sentiment Analysis Techniques:** Natural Language Processing (NLP) techniques like RoBERTa, VADER or TextBlob are used to quantify sentiment.
+- **Sentiment Analysis Techniques:** Natural Language Processing (NLP) techniques like RoBERTa, BERT or DistilBERT are used to quantify sentiment.
 - **Integration with Models:** Sentiment scores are included as features in the models, to capture the influence of market sentiment on price movements.
 
 ## Hurst Exponent (HE) and Local Lyapunov Exponent (LLE) Analysis
